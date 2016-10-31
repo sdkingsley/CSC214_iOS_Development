@@ -13,17 +13,24 @@
 		261C5C0F1D9C08150062A5FF /* Sarah_Kingsley_Assignment3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 261C5C0D1D9C08150062A5FF /* Sarah_Kingsley_Assignment3.xcdatamodeld */; };
 		261C5C111D9C08150062A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261C5C101D9C08150062A5FF /* Assets.xcassets */; };
 		261C5C141D9C08150062A5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261C5C121D9C08150062A5FF /* LaunchScreen.storyboard */; };
+		261C5C1C1D9C99020062A5FF /* View2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C5C1B1D9C99020062A5FF /* View2Controller.swift */; };
+		261C5C1E1D9C9C710062A5FF /* View3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C5C1D1D9C9C710062A5FF /* View3Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarah_Kingsley_Assignment3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		260710351DAF02EE007ED40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sarah_Kingsley_Assignment5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261C5C061D9C08150062A5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261C5C081D9C08150062A5FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		261C5C0B1D9C08150062A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		261C5C0E1D9C08150062A5FF /* Sarah_Kingsley_Assignment3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sarah_Kingsley_Assignment3.xcdatamodel; sourceTree = "<group>"; };
 		261C5C101D9C08150062A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261C5C131D9C08150062A5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		261C5C151D9C08150062A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		261C5C1B1D9C99020062A5FF /* View2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2Controller.swift; sourceTree = "<group>"; };
+		261C5C1D1D9C9C710062A5FF /* View3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3Controller.swift; sourceTree = "<group>"; };
+		26DF3A291DAF18BC00A59FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		26DF3A2A1DAF18F300A59FC9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		26DF3A2B1DAF18F300A59FC9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +47,7 @@
 		261C5BFA1D9C08150062A5FF = {
 			isa = PBXGroup;
 			children = (
-				261C5C051D9C08150062A5FF /* Sarah_Kingsley_Assignment3 */,
+				261C5C051D9C08150062A5FF /* Sarah_Kingsley_Assignment5 */,
 				261C5C041D9C08150062A5FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +55,33 @@
 		261C5C041D9C08150062A5FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment3.app */,
+				261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment5.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		261C5C051D9C08150062A5FF /* Sarah_Kingsley_Assignment3 */ = {
+		261C5C051D9C08150062A5FF /* Sarah_Kingsley_Assignment5 */ = {
 			isa = PBXGroup;
 			children = (
 				261C5C061D9C08150062A5FF /* AppDelegate.swift */,
 				261C5C081D9C08150062A5FF /* ViewController.swift */,
+				261C5C1B1D9C99020062A5FF /* View2Controller.swift */,
+				261C5C1D1D9C9C710062A5FF /* View3Controller.swift */,
 				261C5C0A1D9C08150062A5FF /* Main.storyboard */,
 				261C5C101D9C08150062A5FF /* Assets.xcassets */,
 				261C5C121D9C08150062A5FF /* LaunchScreen.storyboard */,
 				261C5C151D9C08150062A5FF /* Info.plist */,
 				261C5C0D1D9C08150062A5FF /* Sarah_Kingsley_Assignment3.xcdatamodeld */,
 			);
-			path = Sarah_Kingsley_Assignment3;
+			path = Sarah_Kingsley_Assignment5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		261C5C021D9C08150062A5FF /* Sarah_Kingsley_Assignment3 */ = {
+		261C5C021D9C08150062A5FF /* Sarah_Kingsley_Assignment5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 261C5C181D9C08150062A5FF /* Build configuration list for PBXNativeTarget "Sarah_Kingsley_Assignment3" */;
+			buildConfigurationList = 261C5C181D9C08150062A5FF /* Build configuration list for PBXNativeTarget "Sarah_Kingsley_Assignment5" */;
 			buildPhases = (
 				261C5BFF1D9C08150062A5FF /* Sources */,
 				261C5C001D9C08150062A5FF /* Frameworks */,
@@ -82,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = Sarah_Kingsley_Assignment3;
+			name = Sarah_Kingsley_Assignment5;
 			productName = Sarah_Kingsley_Assignment3;
-			productReference = 261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment3.app */;
+			productReference = 261C5C031D9C08150062A5FF /* Sarah_Kingsley_Assignment5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 261C5BFE1D9C08150062A5FF /* Build configuration list for PBXProject "Sarah_Kingsley_Assignment3" */;
+			buildConfigurationList = 261C5BFE1D9C08150062A5FF /* Build configuration list for PBXProject "Sarah_Kingsley_Assignment5" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				261C5C021D9C08150062A5FF /* Sarah_Kingsley_Assignment3 */,
+				261C5C021D9C08150062A5FF /* Sarah_Kingsley_Assignment5 */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261C5C1E1D9C9C710062A5FF /* View3Controller.swift in Sources */,
 				261C5C091D9C08150062A5FF /* ViewController.swift in Sources */,
+				261C5C1C1D9C99020062A5FF /* View2Controller.swift in Sources */,
 				261C5C071D9C08150062A5FF /* AppDelegate.swift in Sources */,
 				261C5C0F1D9C08150062A5FF /* Sarah_Kingsley_Assignment3.xcdatamodeld in Sources */,
 			);
@@ -151,7 +162,9 @@
 		261C5C0A1D9C08150062A5FF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				261C5C0B1D9C08150062A5FF /* Base */,
+				260710351DAF02EE007ED40B /* Base */,
+				26DF3A291DAF18BC00A59FC9 /* en */,
+				26DF3A2A1DAF18F300A59FC9 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				261C5C131D9C08150062A5FF /* Base */,
+				26DF3A2B1DAF18F300A59FC9 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -171,6 +185,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -220,6 +235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -262,9 +278,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Sarah_Kingsley_Assignment3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sarah_Kingsley_Assignment5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.skingsl2.Sarah-Kingsley-Assignment3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skingsl2.Sarah-Kingsley-Assignment5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,9 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Sarah_Kingsley_Assignment3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sarah_Kingsley_Assignment5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.skingsl2.Sarah-Kingsley-Assignment3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skingsl2.Sarah-Kingsley-Assignment5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -285,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		261C5BFE1D9C08150062A5FF /* Build configuration list for PBXProject "Sarah_Kingsley_Assignment3" */ = {
+		261C5BFE1D9C08150062A5FF /* Build configuration list for PBXProject "Sarah_Kingsley_Assignment5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				261C5C161D9C08150062A5FF /* Debug */,
@@ -294,13 +310,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		261C5C181D9C08150062A5FF /* Build configuration list for PBXNativeTarget "Sarah_Kingsley_Assignment3" */ = {
+		261C5C181D9C08150062A5FF /* Build configuration list for PBXNativeTarget "Sarah_Kingsley_Assignment5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				261C5C191D9C08150062A5FF /* Debug */,
 				261C5C1A1D9C08150062A5FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

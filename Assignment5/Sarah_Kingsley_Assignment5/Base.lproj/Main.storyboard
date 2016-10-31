@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v55-Vb-goM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Red-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sarah_Kingsley_Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FTM-ma-MaF" appends="YES" id="P6J-Ck-SuE"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Red" image="fire" selectedImage="fire" id="Dm7-w5-fwx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FTM-ma-MaF">
+                    <connections>
+                        <action selector="screentapped" destination="BYZ-38-t0r" id="WjM-Sj-qXT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="972" y="-119"/>
+        </scene>
+        <!--Green-->
+        <scene sceneID="OE6-uB-lmc">
+            <objects>
+                <viewController id="vra-W6-EnS" customClass="View2Controller" customModule="Sarah_Kingsley_Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VtC-UO-pWv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyo-6m-Bp2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="21f-hJ-mNh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmR-YJ-egE">
+                                <frame key="frameInset" minX="164" minY="332" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vra-W6-EnS" eventType="touchUpInside" id="YpO-dc-Det"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vmR-YJ-egE" firstAttribute="centerX" secondItem="21f-hJ-mNh" secondAttribute="centerX" id="mI9-Mf-3Kw"/>
+                            <constraint firstItem="vmR-YJ-egE" firstAttribute="centerY" secondItem="21f-hJ-mNh" secondAttribute="centerY" id="ujJ-ip-LNT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Green" image="leaf" selectedImage="leaf" id="KqD-zh-sSO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hck-c3-dzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.400000000000006" y="840.62968515742136"/>
+        </scene>
+        <!--Blue-->
+        <scene sceneID="sqW-De-eU5">
+            <objects>
+                <viewController id="mJX-Og-xXH" customClass="View3Controller" customModule="Sarah_Kingsley_Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lc8-rL-n0o"/>
+                        <viewControllerLayoutGuide type="bottom" id="vwr-8Q-pdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="umY-o9-xdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvy-x9-CEX">
+                                <state key="normal" title="Change Color">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="mJX-Og-xXH" eventType="touchUpInside" id="7BQ-AZ-eTh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kvy-x9-CEX" firstAttribute="centerY" secondItem="umY-o9-xdQ" secondAttribute="centerY" id="TbR-uq-Ev2"/>
+                            <constraint firstItem="Kvy-x9-CEX" firstAttribute="leading" secondItem="umY-o9-xdQ" secondAttribute="leadingMargin" id="WWj-UK-FeE"/>
+                            <constraint firstItem="Kvy-x9-CEX" firstAttribute="centerX" secondItem="umY-o9-xdQ" secondAttribute="centerX" id="nep-tR-hWb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kvy-x9-CEX" secondAttribute="trailing" id="oWj-RC-c0p"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Blue" image="droplet-of-water" selectedImage="droplet-of-water" id="Qun-8e-wmE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MjL-z0-1NP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="700"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9SV-Wg-CWP">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v55-Vb-goM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="yGg-MW-sBe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ctv-3e-MPq"/>
+                        <segue destination="vra-W6-EnS" kind="relationship" relationship="viewControllers" id="a6C-m9-dfS"/>
+                        <segue destination="mJX-Og-xXH" kind="relationship" relationship="viewControllers" id="cwm-gO-Jka"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zna-fl-Upt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="droplet-of-water" width="32" height="32"/>
+        <image name="fire" width="32" height="32"/>
+        <image name="leaf" width="32" height="32"/>
+    </resources>
+</document>

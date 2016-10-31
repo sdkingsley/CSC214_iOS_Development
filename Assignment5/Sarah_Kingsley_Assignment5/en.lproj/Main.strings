@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "Red"; ObjectID = "Dm7-w5-fwx"; */
+"Dm7-w5-fwx.title" = "Red";
+
+/* Class = "UITabBarItem"; title = "Green"; ObjectID = "KqD-zh-sSO"; */
+"KqD-zh-sSO.title" = "Green";
+
+/* Class = "UIButton"; normalTitle = "Change Color"; ObjectID = "Kvy-x9-CEX"; */
+"Kvy-x9-CEX.normalTitle" = "Change Color";
+
+/* Class = "UITabBarItem"; title = "Blue"; ObjectID = "Qun-8e-wmE"; */
+"Qun-8e-wmE.title" = "Blue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vmR-YJ-egE"; */
+"vmR-YJ-egE.normalTitle" = "Button";
