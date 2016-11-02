@@ -25,18 +25,30 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp3-jq-Gnp">
                                     <rect key="frame" x="26" y="15" width="30" height="30"/>
                                     <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="edit:" destination="77x-5J-pXs" eventType="touchUpInside" id="fgj-nG-xch"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udu-kk-C1u">
                                     <rect key="frame" x="103" y="15" width="42" height="30"/>
                                     <state key="normal" title="+Face"/>
+                                    <connections>
+                                        <action selector="addFace:" destination="77x-5J-pXs" eventType="touchUpInside" id="wae-6F-eee"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Km-EMN">
                                     <rect key="frame" x="209" y="15" width="31" height="30"/>
                                     <state key="normal" title="+Lip"/>
+                                    <connections>
+                                        <action selector="addLip:" destination="77x-5J-pXs" eventType="touchUpInside" id="ajY-5N-sKL"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdq-9C-LR2">
                                     <rect key="frame" x="295" y="15" width="35" height="30"/>
                                     <state key="normal" title="+Eye"/>
+                                    <connections>
+                                        <action selector="addEye:" destination="77x-5J-pXs" eventType="touchUpInside" id="ARN-Gy-75F"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
