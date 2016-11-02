@@ -18,6 +18,8 @@
 		260060BA1DC7FED10091E3DE /* Makeup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260060B91DC7FED10091E3DE /* Makeup.swift */; };
 		260060BC1DC802840091E3DE /* MakeupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260060BB1DC802840091E3DE /* MakeupCell.swift */; };
 		264701D61DCA6EE800E661FA /* MakeupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264701D51DCA6EE800E661FA /* MakeupViewController.swift */; };
+		264701D91DCA9C7F00E661FA /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 264701D71DCA9C7F00E661FA /* README.txt */; };
+		264701DA1DCA9C7F00E661FA /* SampleOutput in Resources */ = {isa = PBXBuildFile; fileRef = 264701D81DCA9C7F00E661FA /* SampleOutput */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		260060B91DC7FED10091E3DE /* Makeup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Makeup.swift; sourceTree = "<group>"; };
 		260060BB1DC802840091E3DE /* MakeupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeupCell.swift; sourceTree = "<group>"; };
 		264701D51DCA6EE800E661FA /* MakeupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeupViewController.swift; sourceTree = "<group>"; };
+		264701D71DCA9C7F00E661FA /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
+		264701D81DCA9C7F00E661FA /* SampleOutput */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SampleOutput; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				260060B31DC7FC060091E3DE /* Face.swift */,
 				260060B51DC7FC7C0091E3DE /* Lips.swift */,
 				260060B71DC7FCE20091E3DE /* Eyes.swift */,
+				264701D71DCA9C7F00E661FA /* README.txt */,
+				264701D81DCA9C7F00E661FA /* SampleOutput */,
 				260060B91DC7FED10091E3DE /* Makeup.swift */,
 				260060BB1DC802840091E3DE /* MakeupCell.swift */,
 			);
@@ -144,6 +150,8 @@
 			files = (
 				260060AC1DC7FB7E0091E3DE /* LaunchScreen.storyboard in Resources */,
 				260060A91DC7FB7E0091E3DE /* Assets.xcassets in Resources */,
+				264701D91DCA9C7F00E661FA /* README.txt in Resources */,
+				264701DA1DCA9C7F00E661FA /* SampleOutput in Resources */,
 				260060A41DC7FB7E0091E3DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
