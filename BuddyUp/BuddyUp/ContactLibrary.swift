@@ -8,22 +8,31 @@
 
 import UIKit
 
-class ContactLibrary {
-    var contacts = [Contact]()
+class ContactLibrary: NSObject{
+    var contacts: [Contact] = []
     
     // convenience method to fill the library with a few games
 //    init() {
 //        addContact("Sarah", "5859674979")
 //        addContact("Ellaina", "4842643061")
-//        
 //    }
     
-    func addContact(_ contact:Contact){
+    func addContact(_ contact:Contact) -> Int{
         contacts.append(contact)
+        return contacts.index(of: contact)!
     }
     
-    func addContact(_ name:String, _ number:String){
-        let contact = Contact(name,number)
-        addContact(contact)
+    func removeContact(_ contact:Contact){
+        if let index = contacts.index(of: contact){
+            contacts.remove(at: index)
+        }
+    }
+    
+    func moveContact(_ fromIndex:Int, _ toIndex:Int){
+        if fromIndex != toIndex{
+            let face = contacts[fromIndex]
+            contacts.remove(at: fromIndex)
+            contacts.insert(face, at: toIndex)
+        }
     }
 }

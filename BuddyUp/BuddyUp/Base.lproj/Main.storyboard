@@ -64,6 +64,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lni-2R-ppe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="LlZ-1G-Mzo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -84,13 +85,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Wrq-of-ye7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-zT-10X">
+                                    <rect key="frame" x="32" y="22" width="30" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="editList:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="sp5-LY-V9q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="w5Y-zT-10X" firstAttribute="centerY" secondItem="Wrq-of-ye7" secondAttribute="centerY" id="IAW-Fl-Qmd"/>
+                                <constraint firstItem="w5Y-zT-10X" firstAttribute="leading" secondItem="Wrq-of-ye7" secondAttribute="leading" constant="24" id="Uaf-GR-0gv"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="i04-43-zin">
+                            <rect key="frame" x="0.0" y="132" width="375" height="160"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma7-zF-Ydg">
+                                    <rect key="frame" x="337" y="122" width="30" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addContact:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="YIw-u0-mpP"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Friend's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70Q-7o-pgi">
+                                    <rect key="frame" x="139" y="41" width="150" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="ItJ-Yk-ElG" id="8aH-iL-vxD"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5555555555" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezf-fl-ncV">
+                                    <rect key="frame" x="139" y="79" width="150" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="ItJ-Yk-ElG" id="dIN-5e-mx7"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add New Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hy-gY-wrJ">
+                                    <rect key="frame" x="130" y="8" width="135" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="70Q-7o-pgi" firstAttribute="centerX" secondItem="i04-43-zin" secondAttribute="centerX" id="Dvw-W8-mhN"/>
+                                <constraint firstAttribute="bottom" secondItem="ma7-zF-Ydg" secondAttribute="bottom" constant="8" id="FPY-ru-p53"/>
+                                <constraint firstItem="70Q-7o-pgi" firstAttribute="top" secondItem="3Hy-gY-wrJ" secondAttribute="bottom" constant="8" id="IWK-hp-FKM"/>
+                                <constraint firstAttribute="trailing" secondItem="ma7-zF-Ydg" secondAttribute="trailing" constant="8" id="M3S-77-MKM"/>
+                                <constraint firstItem="3Hy-gY-wrJ" firstAttribute="centerX" secondItem="i04-43-zin" secondAttribute="centerX" id="cU3-0U-UPx"/>
+                                <constraint firstItem="ezf-fl-ncV" firstAttribute="centerX" secondItem="i04-43-zin" secondAttribute="centerX" id="hJe-cw-d7j"/>
+                                <constraint firstItem="3Hy-gY-wrJ" firstAttribute="top" secondItem="i04-43-zin" secondAttribute="top" constant="8" id="kiJ-XK-FtB"/>
+                                <constraint firstItem="ezf-fl-ncV" firstAttribute="top" secondItem="70Q-7o-pgi" secondAttribute="bottom" constant="8" id="rqD-ke-YTh"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Ueq-ix-Shq" appends="YES" id="9F6-h6-x92"/>
+                            </connections>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gnI-wu-bET">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="b7C-VZ-QF4" detailTextLabel="aK3-S2-Z3p" style="IBUITableViewCellStyleValue1" id="gnI-wu-bET">
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnI-wu-bET" id="J7F-rf-Kp6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7C-VZ-QF4">
+                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aK3-S2-Z3p">
+                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -100,8 +187,17 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="aSZ-Nf-09H"/>
+                    <connections>
+                        <outlet property="NameTextview" destination="70Q-7o-pgi" id="Xw9-x3-8nv"/>
+                        <outlet property="NumberTextview" destination="ezf-fl-ncV" id="HXc-dX-mG3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0L-Fz-bjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ueq-ix-Shq">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="ItJ-Yk-ElG" id="kEX-6a-iVh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="972" y="698"/>
         </scene>
