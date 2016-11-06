@@ -26,11 +26,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         // Do any additional setup after loading the view, typically from a nib.
-        
-        for _ in 0..<5{
-            let temp = Contact("Sarah Kingsley","5859674979")
-            library.addContact(temp)
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,14 +62,14 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             newName = DEFAULT_NAME
         }
         
-        if let newText = NameTextview.text{
+        if let newText = NumberTextview.text{
             newNumber = newText
         }else{
             newNumber = DEFAULT_NUMBER
         }
         
-        if let index = library.addContact(Contact(newName,newNumber)){
-            let indexPath = NSIndexPath(row: index, section: Contact)
+        if let index = library.createNewContact(newName, newNumber) {
+            let indexPath = NSIndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath as IndexPath], with: .automatic)
         }
     }
@@ -93,8 +88,10 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let contact = library.contacts[indexPath.row]
-            library.removeContact(contact)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            verifyDelete(contact.name, { (action) -> Void in
+                self.library.removeContact(contact)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
         }
     }
     
@@ -121,25 +118,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     @IBAction func dismissKeyboard(_ sender: AnyObject) {
         NameTextview.resignFirstResponder()
         NumberTextview.resignFirstResponder()
-    }
-    
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
-        
-        //print("current:\(range)")
-        //print("replace:\(string)")
-        
-        if let current = textField.text, !current.isEmpty {
-            return string.characters.count == 0
-        }
-        else
-            if string.characters.count <= 1 {
-                return true
-            }
-            else {
-                return false
-        }
     }
     
 

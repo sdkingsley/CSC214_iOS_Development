@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Send Alert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,12 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tda-in-r4c">
-                                <rect key="frame" x="123" y="218" width="128" height="30"/>
-                                <state key="normal" title="Send Out Red Flag"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxJ-In-RSd">
-                                <rect key="frame" x="149" y="323" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxJ-In-RSd">
+                                <rect key="frame" x="148" y="323" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,8 +31,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="tda-in-r4c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0mZ-17-I94"/>
-                            <constraint firstItem="tda-in-r4c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="198" id="H9Y-Ye-x3E"/>
                             <constraint firstItem="AxJ-In-RSd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nk8-Oc-EBM"/>
                             <constraint firstItem="AxJ-In-RSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfd-cU-FwB"/>
                         </constraints>
@@ -44,7 +38,7 @@
                             <outletCollection property="gestureRecognizers" destination="xzE-8A-MEO" appends="YES" id="RoS-3t-ZZC"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="d9o-Mk-lns"/>
+                    <tabBarItem key="tabBarItem" title="Send Alert" image="sent-mail" id="d9o-Mk-lns"/>
                     <connections>
                         <outlet property="LongPressLabel" destination="Nk8-Oc-EBM" id="NEt-w2-g8p"/>
                     </connections>
@@ -77,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="41" y="401"/>
         </scene>
-        <!--Item-->
+        <!--My Party-->
         <scene sceneID="GqQ-vp-Hm0">
             <objects>
                 <tableViewController id="ItJ-Yk-ElG" customClass="NumbersViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,18 +154,18 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnI-wu-bET" id="J7F-rf-Kp6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7C-VZ-QF4">
-                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aK3-S2-Z3p">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -186,7 +180,7 @@
                             <outlet property="delegate" destination="ItJ-Yk-ElG" id="Lyp-GJ-ixe"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="aSZ-Nf-09H"/>
+                    <tabBarItem key="tabBarItem" title="My Party" image="people" id="aSZ-Nf-09H"/>
                     <connections>
                         <outlet property="NameTextview" destination="70Q-7o-pgi" id="Xw9-x3-8nv"/>
                         <outlet property="NumberTextview" destination="ezf-fl-ncV" id="HXc-dX-mG3"/>
@@ -202,4 +196,8 @@
             <point key="canvasLocation" x="972" y="698"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="people" width="24" height="24"/>
+        <image name="sent-mail" width="24" height="24"/>
+    </resources>
 </document>

@@ -35,4 +35,8 @@ class ContactLibrary: NSObject{
             contacts.insert(face, at: toIndex)
         }
     }
+    
+    func createNewContact(_ name:String, _ number:String) -> Int? {
+        return addContact(Contact(name, number))
+    }
 }
