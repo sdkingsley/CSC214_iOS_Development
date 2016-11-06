@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assigment8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYW-Ay-D0f">
+                                <rect key="frame" x="142" y="45" width="91" height="30"/>
+                                <state key="normal" title="Change View"/>
+                                <connections>
+                                    <segue destination="5dq-iX-1YH" kind="show" id="8U0-Ux-xpm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fem-ll-awC">
+                                <rect key="frame" x="144" y="83" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52S-DQ-j7a">
+                                <rect key="frame" x="142" y="121" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJ0-2R-nQO">
+                                <rect key="frame" x="142" y="159" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Y8-Qo-Sfj">
+                                <rect key="frame" x="144" y="197" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fem-ll-awC" firstAttribute="top" secondItem="PYW-Ay-D0f" secondAttribute="bottom" constant="8" id="1M4-AF-1q8"/>
+                            <constraint firstItem="1Y8-Qo-Sfj" firstAttribute="top" secondItem="qJ0-2R-nQO" secondAttribute="bottom" constant="8" id="CXh-iq-v2c"/>
+                            <constraint firstItem="1Y8-Qo-Sfj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FPb-ZF-N20"/>
+                            <constraint firstItem="fem-ll-awC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9l-Dc-2Hx"/>
+                            <constraint firstItem="52S-DQ-j7a" firstAttribute="top" secondItem="fem-ll-awC" secondAttribute="bottom" constant="8" id="URH-Rc-faZ"/>
+                            <constraint firstItem="PYW-Ay-D0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgO-cA-HGt"/>
+                            <constraint firstItem="PYW-Ay-D0f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="gqv-JN-r1V"/>
+                            <constraint firstItem="qJ0-2R-nQO" firstAttribute="top" secondItem="52S-DQ-j7a" secondAttribute="bottom" constant="8" id="kmG-an-o6H"/>
+                            <constraint firstItem="qJ0-2R-nQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lD5-WP-NLa"/>
+                            <constraint firstItem="52S-DQ-j7a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZf-bY-X0a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changingButton" destination="PYW-Ay-D0f" id="xKg-oe-PIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Button Changer View Controller-->
+        <scene sceneID="YlU-aM-zAH">
+            <objects>
+                <viewController id="5dq-iX-1YH" customClass="ButtonChangerViewController" customModule="Assigment8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lcj-hT-HH0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fmy-20-Q7a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r3C-nP-qQU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-rm-zBf">
+                                <rect key="frame" x="142" y="43" width="91" height="30"/>
+                                <state key="normal" title="Change View"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G69-az-Poh">
+                                <rect key="frame" x="70" y="81" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doe-a7-arc">
+                                <rect key="frame" x="204" y="81" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvQ-Kf-wUX">
+                                <rect key="frame" x="70" y="128" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AwE-wO-iLV">
+                                <rect key="frame" x="204" y="128" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="doe-a7-arc" firstAttribute="centerX" secondItem="r3C-nP-qQU" secondAttribute="centerX" id="0Il-Ir-UtJ"/>
+                            <constraint firstItem="G69-az-Poh" firstAttribute="top" secondItem="IQd-rm-zBf" secondAttribute="bottom" constant="8" id="24V-he-hFY"/>
+                            <constraint firstItem="IQd-rm-zBf" firstAttribute="centerX" secondItem="r3C-nP-qQU" secondAttribute="centerX" id="NAH-1A-PWS"/>
+                            <constraint firstItem="IQd-rm-zBf" firstAttribute="top" secondItem="lcj-hT-HH0" secondAttribute="bottom" constant="24" id="Og6-17-Wjq"/>
+                            <constraint firstItem="doe-a7-arc" firstAttribute="top" secondItem="IQd-rm-zBf" secondAttribute="bottom" constant="8" id="QLi-rG-xKy"/>
+                            <constraint firstItem="AwE-wO-iLV" firstAttribute="top" secondItem="doe-a7-arc" secondAttribute="bottom" constant="8" id="ZvK-dU-1Sc"/>
+                            <constraint firstItem="AwE-wO-iLV" firstAttribute="centerX" secondItem="r3C-nP-qQU" secondAttribute="centerX" id="j6Z-4D-2cL"/>
+                            <constraint firstItem="G69-az-Poh" firstAttribute="centerX" secondItem="r3C-nP-qQU" secondAttribute="centerX" id="mpA-qm-3l2"/>
+                            <constraint firstItem="AvQ-Kf-wUX" firstAttribute="centerX" secondItem="r3C-nP-qQU" secondAttribute="centerX" id="rlL-Dd-k0j"/>
+                            <constraint firstItem="AvQ-Kf-wUX" firstAttribute="top" secondItem="G69-az-Poh" secondAttribute="bottom" constant="8" id="t6r-Wh-qkg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrF-V2-KFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="38"/>
+        </scene>
+    </scenes>
+</document>
