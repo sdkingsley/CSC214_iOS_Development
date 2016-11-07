@@ -13,12 +13,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet var LongPressLabel: NSLayoutConstraint!
     @IBOutlet var LongPressLabelAnimate: UILabel!
-    var library: ContactLibrary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        library = ContactLibrary()
         
         if !MFMessageComposeViewController.canSendText() {
             print("SMS services are not available")
@@ -40,12 +37,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
         
-        for _ in library.contacts{
-            let num = (library.contacts.popLast()?.number)!
-            messageVC.recipients = [num]
-            print("NUMBER" + num)
-            messageVC.body = "🙅🏼"
-        }
+        messageVC.recipients = ["5859674979","4842643061"]
+        messageVC.body = "🙅🏼"
         
         self.present(messageVC, animated:true, completion: nil)
         

@@ -12,7 +12,11 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     var library: ContactLibrary!
     @IBOutlet var NameTextview: UITextField!
     @IBOutlet var NumberTextview: UITextField!
+    var numbers: [String] = []
     
+    func getNumbers() -> [String]{
+        return numbers
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +76,8 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             let indexPath = NSIndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath as IndexPath], with: .automatic)
         }
+        
+        numbers.append(newNumber)
     }
     
     @IBAction func editList(_ sender: UIButton) {
@@ -91,6 +97,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             verifyDelete(contact.name, { (action) -> Void in
                 self.library.removeContact(contact)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.numbers.remove(at: self.numbers.index(of: contact.number)!)
             })
         }
     }
@@ -120,6 +127,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         NumberTextview.resignFirstResponder()
     }
     
+    //Modified from this resource: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
