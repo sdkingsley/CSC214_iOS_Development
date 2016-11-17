@@ -37,7 +37,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
         
-        messageVC.recipients = ["5859674979","4842643061"]
+        messageVC.recipients = ["5852755766","5852754505"]
         messageVC.body = "🙅🏼"
         
         self.present(messageVC, animated:true, completion: nil)
@@ -77,7 +77,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     func animateMovement() {
         let height = view.frame.height
-        self.LongPressLabel.constant += height/10
+        self.LongPressLabel.constant -= height/10
         
         let movementClosure = { () -> Void in
             self.view.layoutIfNeeded()
@@ -97,7 +97,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     func animateMovementBack() {
         let height = view.frame.height
-        self.LongPressLabel.constant -= height/10
+        self.LongPressLabel.constant += height/10
         UIView.animate(
             withDuration: 0.2,
             animations: { _ in
@@ -105,7 +105,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         })
     }
     
-    func animateBackground() {
+    func animateColor() {
         UIView.animate(
             withDuration: 0.2,
             delay: 0,
@@ -124,7 +124,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBAction func WrongAnimations(_ sender: Any) {
         animateMovement()
-        animateBackground()
+        animateColor()
     }
 }
 

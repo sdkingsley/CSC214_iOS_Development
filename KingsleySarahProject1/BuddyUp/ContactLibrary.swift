@@ -13,8 +13,8 @@ class ContactLibrary: NSObject{
     
     override init() {
         super.init()
-        addContact("Sarah", "5859674979")
-        addContact("Ellaina", "4842643061")
+        addContact("Furguson", "5852755766")
+        addContact("Marty", "5852754505")
     }
     
     func addContact(_ contact:Contact) -> Int{

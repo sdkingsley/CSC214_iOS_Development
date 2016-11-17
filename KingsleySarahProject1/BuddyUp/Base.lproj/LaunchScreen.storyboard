@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="buddyUpLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="Ujn-ue-kFa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="buddyUpLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="Ujn-ue-kFa">
                                 <rect key="frame" x="75" y="223" width="200" height="200"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buddyUpLaunch" width="450" height="450"/>
+        <image name="buddyUpLaunch" width="300" height="300"/>
     </resources>
 </document>
