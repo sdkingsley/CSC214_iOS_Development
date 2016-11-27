@@ -8,20 +8,41 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
+    
+    var picture: Picture!
 
     @IBOutlet var ImageView: UIImageView!
+    
+    @IBOutlet var TextField: UITextField!
     
     @IBOutlet var CameraButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
+            // set image view
+            ImageView.image = img
+        }
+        
+        TextField.text = picture.aString
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        TextField.resignFirstResponder()
+        return true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("bye bye")
     }
 
     @IBAction func AddPhoto(_ sender: Any) {
@@ -57,6 +78,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func AspectFit(_ sender: Any) {
         ImageView.contentMode = UIViewContentMode.scaleAspectFit

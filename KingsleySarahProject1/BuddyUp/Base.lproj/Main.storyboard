@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lni-2R-ppe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,18 +22,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxJ-In-RSd">
-                                <rect key="frame" x="148" y="323" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-hY-cmi">
+                                <rect key="frame" x="16" y="64" width="343" height="390"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="longhold" translatesAutoresizingMaskIntoConstraints="NO" id="0es-Aa-jnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="250"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long hold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-QJ-A1Y">
+                                        <rect key="frame" x="0.0" y="269" width="343" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" red="0.66988104581832886" green="0.30750596523284912" blue="0.27170312404632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MY-ZQ-frg">
+                                        <rect key="frame" x="0.0" y="320.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.66988104581832886" green="0.30750596523284912" blue="0.27170312404632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xq-4O-h37">
+                                        <rect key="frame" x="0.0" y="360" width="343" height="30"/>
+                                        <state key="normal" title="Edit Team">
+                                            <color key="titleColor" red="0.96254104375839233" green="0.16370296478271484" blue="0.40773811936378479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ItJ-Yk-ElG" kind="show" id="b4i-Hr-1Ca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="AxJ-In-RSd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nk8-Oc-EBM"/>
-                            <constraint firstItem="AxJ-In-RSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfd-cU-FwB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rnv-hY-cmi" secondAttribute="trailing" id="3bW-bI-HaC"/>
+                            <constraint firstItem="rnv-hY-cmi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LWB-5i-FjE"/>
+                            <constraint firstItem="rnv-hY-cmi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="s36-gB-AXY"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xzE-8A-MEO" appends="YES" id="RoS-3t-ZZC"/>
@@ -40,10 +65,6 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Send Alert" image="sent-mail" id="d9o-Mk-lns"/>
-                    <connections>
-                        <outlet property="LongPressLabel" destination="Nk8-Oc-EBM" id="NEt-w2-g8p"/>
-                        <outlet property="LongPressLabelAnimate" destination="AxJ-In-RSd" id="YJp-Tn-Wvx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xzE-8A-MEO">
@@ -58,25 +79,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="46C-g3-AyE">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lni-2R-ppe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="LlZ-1G-Mzo">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="h66-xK-Ipq"/>
-                        <segue destination="ItJ-Yk-ElG" kind="relationship" relationship="viewControllers" id="sih-fq-Xfn"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ffv-xv-QYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="41" y="401"/>
         </scene>
         <!--My Party-->
         <scene sceneID="GqQ-vp-Hm0">
@@ -200,10 +202,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="972" y="698"/>
+            <point key="canvasLocation" x="1831" y="38"/>
         </scene>
     </scenes>
     <resources>
+        <image name="longhold" width="250" height="250"/>
         <image name="people" width="24" height="24"/>
         <image name="sent-mail" width="24" height="24"/>
     </resources>
