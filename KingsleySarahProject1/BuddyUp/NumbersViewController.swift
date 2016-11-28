@@ -16,8 +16,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        library = ContactLibrary()
-        
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
@@ -27,13 +25,17 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     //this looks promising: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "ViewTransfer2"{
             let viewChanger = segue.destination as! ViewController
             
-            viewChanger.gotNumbers = library.getNumbers()
-            viewChanger.gotNames = library.getNames()
+            viewChanger.gotLibrary = library
         }
     }
     

@@ -12,8 +12,7 @@ import MessageUI
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet var TeamLabel: UILabel! //label for string of team names
-    var gotNumbers: [String] = [] //numbers for sending message to
-    var gotNames: [String] = []
+    var gotLibrary: ContactLibrary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +20,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         if !MFMessageComposeViewController.canSendText() {
             print("SMS services are not available")
         }
-        
-//        animateOpacity()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -32,11 +29,19 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         var NamesList:String = "Team: "
         
-        for name in gotNames{
+        for name in gotLibrary.getNames(){
             NamesList.append(name + " ")
         }
         
         TeamLabel.text = NamesList
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "ViewTransfer"{
+            let viewChanger = segue.destination as! NumbersViewController
+            
+            viewChanger.library = gotLibrary
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,7 +55,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
         
-        messageVC.recipients = gotNumbers
+        messageVC.recipients = gotLibrary.getNumbers()
         messageVC.body = "🙅🏼"
         
         self.present(messageVC, animated:true, completion: nil)

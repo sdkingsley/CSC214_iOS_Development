@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let myViewController = window!.rootViewController as! ViewController
-        myViewController.gotNames = contacts.getNames()
-        myViewController.gotNumbers = contacts.getNumbers()
+        myViewController.gotLibrary = contacts
         
         return true
     }
@@ -34,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        _ = contactsPerister.setContacts(contacts)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

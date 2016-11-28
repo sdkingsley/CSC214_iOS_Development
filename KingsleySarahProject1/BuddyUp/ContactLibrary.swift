@@ -21,11 +21,6 @@ class ContactLibrary: NSObject, NSCoding{
         return contacts.index(of: contact)!
     }
     
-    func addContact(_ name: String, _ number: String) {
-        let contact = Contact(name, number)
-        addContact(contact)
-    }
-    
     func removeContact(_ contact:Contact){
         if let index = contacts.index(of: contact){
             contacts.remove(at: index)
