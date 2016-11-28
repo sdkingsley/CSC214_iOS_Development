@@ -11,8 +11,9 @@ import MessageUI
 
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
-    @IBOutlet var LongPressLabel: NSLayoutConstraint!
-    @IBOutlet var LongPressLabelAnimate: UILabel!
+    @IBOutlet var TeamLabel: UILabel! //label for string of team names
+    var gotNumbers: [String] = [] //numbers for sending message to
+    var gotNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,23 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
             print("SMS services are not available")
         }
         
-        animateOpacity()
+//        animateOpacity()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        var NamesList:String = "Team: "
+        
+        for name in gotNames{
+            NamesList.append(name + " ")
+        }
+        
+        TeamLabel.text = NamesList
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,7 +50,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
         
-        messageVC.recipients = ["5852755766","5852754505"]
+        messageVC.recipients = gotNumbers
         messageVC.body = "🙅🏼"
         
         self.present(messageVC, animated:true, completion: nil)
@@ -52,79 +65,79 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 
-    func animateOpacity() {
-        
-        UIView.animate(
-            withDuration: 2,
-            delay: 0,
-            options: [],
-            animations: { () -> Void in
-                self.LongPressLabelAnimate.alpha = 0
-                
-        },
-            completion: { (Bool) -> Void in
-                self.animateOpacityBack()
-        })
-    }
-    
-    func animateOpacityBack() {
-        UIView.animate(
-            withDuration: 3,
-            animations: { () -> Void in
-                self.LongPressLabelAnimate.alpha = 1
-        })
-    }
-    
-    func animateMovement() {
-        let height = view.frame.height
-        self.LongPressLabel.constant -= height/10
-        
-        let movementClosure = { () -> Void in
-            self.view.layoutIfNeeded()
-        }
-        
-        
-        UIView.animate(
-            withDuration: 0.2,
-            delay: 0,
-            options: [.curveLinear],
-            animations: movementClosure,
-            completion: { (Bool) -> Void in
-                self.animateMovementBack()
-        })
-    }
-
-    
-    func animateMovementBack() {
-        let height = view.frame.height
-        self.LongPressLabel.constant += height/10
-        UIView.animate(
-            withDuration: 0.2,
-            animations: { _ in
-                self.view.layoutIfNeeded()
-        })
-    }
-    
-    func animateColor() {
-        UIView.animate(
-            withDuration: 0.2,
-            delay: 0,
-            options: [],
-            animations: { () -> Void in
-                self.view.backgroundColor = UIColor.lightGray
-        },
-            completion: { (Bool) -> Void in
-                UIView.animate(
-                    withDuration: 0.2,
-                    animations: { () -> Void in
-                        self.view.backgroundColor = UIColor.white
-                })
-        })
-    }
-    
-    @IBAction func WrongAnimations(_ sender: Any) {
-        animateMovement()
-        animateColor()
-    }
+//    func animateOpacity() {
+//        
+//        UIView.animate(
+//            withDuration: 2,
+//            delay: 0,
+//            options: [],
+//            animations: { () -> Void in
+//                self.LongPressLabelAnimate.alpha = 0
+//                
+//        },
+//            completion: { (Bool) -> Void in
+//                self.animateOpacityBack()
+//        })
+//    }
+//    
+//    func animateOpacityBack() {
+//        UIView.animate(
+//            withDuration: 3,
+//            animations: { () -> Void in
+//                self.LongPressLabelAnimate.alpha = 1
+//        })
+//    }
+//    
+//    func animateMovement() {
+//        let height = view.frame.height
+//        self.LongPressLabel.constant -= height/10
+//        
+//        let movementClosure = { () -> Void in
+//            self.view.layoutIfNeeded()
+//        }
+//        
+//        
+//        UIView.animate(
+//            withDuration: 0.2,
+//            delay: 0,
+//            options: [.curveLinear],
+//            animations: movementClosure,
+//            completion: { (Bool) -> Void in
+//                self.animateMovementBack()
+//        })
+//    }
+//
+//    
+//    func animateMovementBack() {
+//        let height = view.frame.height
+//        self.LongPressLabel.constant += height/10
+//        UIView.animate(
+//            withDuration: 0.2,
+//            animations: { _ in
+//                self.view.layoutIfNeeded()
+//        })
+//    }
+//    
+//    func animateColor() {
+//        UIView.animate(
+//            withDuration: 0.2,
+//            delay: 0,
+//            options: [],
+//            animations: { () -> Void in
+//                self.view.backgroundColor = UIColor.lightGray
+//        },
+//            completion: { (Bool) -> Void in
+//                UIView.animate(
+//                    withDuration: 0.2,
+//                    animations: { () -> Void in
+//                        self.view.backgroundColor = UIColor.white
+//                })
+//        })
+//    }
+//    
+//    @IBAction func WrongAnimations(_ sender: Any) {
+//        animateMovement()
+//        animateColor()
+//    }
 }
 

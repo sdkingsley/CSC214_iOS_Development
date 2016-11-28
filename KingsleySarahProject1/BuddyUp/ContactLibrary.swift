@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ContactLibrary: NSObject{
+class ContactLibrary: NSObject, NSCoding{
     var contacts: [Contact] = []
+    static let contactsArrayKey = "contacts"
     
     override init() {
         super.init()
-        addContact("Furguson", "5852755766")
-        addContact("Marty", "5852754505")
     }
     
     func addContact(_ contact:Contact) -> Int{
@@ -43,5 +42,35 @@ class ContactLibrary: NSObject{
     
     func createNewContact(_ name:String, _ number:String) -> Int? {
         return addContact(Contact(name, number))
+    }
+    
+    func getNumbers() -> [String]{
+        var nums:[String] = []
+        
+        for contact in contacts{
+            nums.append(contact.number)
+        }
+        
+        return nums
+    }
+    
+    func getNames() -> [String]{
+        var names:[String] = []
+        
+        for contact in contacts{
+            names.append(contact.name)
+        }
+        
+        return names
+    }
+    
+    // encodes (serializes) contact library
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(contacts, forKey: ContactLibrary.contactsArrayKey)
+    }
+    
+    // decodes (deserializes) contact library
+    required init(coder aDecoder: NSCoder) {
+        contacts = aDecoder.decodeObject(forKey: ContactLibrary.contactsArrayKey) as! [Contact]
     }
 }

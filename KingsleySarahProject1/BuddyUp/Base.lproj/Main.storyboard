@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Send Alert-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                                             <color key="titleColor" red="0.96254104375839233" green="0.16370296478271484" blue="0.40773811936378479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ItJ-Yk-ElG" kind="show" id="b4i-Hr-1Ca"/>
+                                            <segue destination="ItJ-Yk-ElG" kind="show" identifier="ViewTransfer" id="b4i-Hr-1Ca"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,10 +61,12 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xzE-8A-MEO" appends="YES" id="RoS-3t-ZZC"/>
-                            <outletCollection property="gestureRecognizers" destination="UGP-XZ-W8T" appends="YES" id="kue-Lz-Eqw"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send Alert" image="sent-mail" id="d9o-Mk-lns"/>
+                    <navigationItem key="navigationItem" id="Afh-cA-Hyj"/>
+                    <connections>
+                        <outlet property="TeamLabel" destination="4MY-ZQ-frg" id="taN-oX-NTw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xzE-8A-MEO">
@@ -72,19 +74,14 @@
                         <action selector="RedFlag:" destination="BYZ-38-t0r" id="Vqc-F6-T2b"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <tapGestureRecognizer id="UGP-XZ-W8T">
-                    <connections>
-                        <action selector="WrongAnimations:" destination="BYZ-38-t0r" id="xLL-Om-Fbe"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
         </scene>
         <!--My Party-->
         <scene sceneID="GqQ-vp-Hm0">
             <objects>
                 <tableViewController id="ItJ-Yk-ElG" customClass="NumbersViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z0g-QK-4eS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z0g-QK-4eS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,8 +89,15 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-vT-rhQ">
+                                    <rect key="frame" x="8" y="22" width="51" height="30"/>
+                                    <state key="normal" title="Update"/>
+                                    <connections>
+                                        <segue destination="BYZ-38-t0r" kind="show" identifier="ViewTransfer2" id="RGt-s0-IvA"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-zT-10X">
-                                    <rect key="frame" x="32" y="22" width="30" height="30"/>
+                                    <rect key="frame" x="337" y="22" width="30" height="30"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
                                         <action selector="editList:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="sp5-LY-V9q"/>
@@ -102,12 +106,14 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="w5Y-zT-10X" firstAttribute="centerY" secondItem="Wrq-of-ye7" secondAttribute="centerY" id="IAW-Fl-Qmd"/>
-                                <constraint firstItem="w5Y-zT-10X" firstAttribute="leading" secondItem="Wrq-of-ye7" secondAttribute="leading" constant="24" id="Uaf-GR-0gv"/>
+                                <constraint firstItem="dAN-vT-rhQ" firstAttribute="leading" secondItem="Wrq-of-ye7" secondAttribute="leading" constant="12" id="Bby-Pa-nRw"/>
+                                <constraint firstItem="w5Y-zT-10X" firstAttribute="centerY" secondItem="Wrq-of-ye7" secondAttribute="centerY" id="kvn-Au-2s1"/>
+                                <constraint firstItem="dAN-vT-rhQ" firstAttribute="centerY" secondItem="Wrq-of-ye7" secondAttribute="centerY" id="pvN-6U-QT0"/>
+                                <constraint firstAttribute="trailing" secondItem="w5Y-zT-10X" secondAttribute="trailing" constant="12" id="tJ7-V1-twU"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="i04-43-zin">
-                            <rect key="frame" x="0.0" y="132" width="375" height="160"/>
+                            <rect key="frame" x="0.0" y="178" width="375" height="160"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma7-zF-Ydg">
@@ -117,8 +123,8 @@
                                         <action selector="addContact:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="YIw-u0-mpP"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Friend's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70Q-7o-pgi">
-                                    <rect key="frame" x="139" y="41" width="150" height="30"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Friend's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70Q-7o-pgi">
+                                    <rect key="frame" x="130.5" y="37" width="114" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -126,8 +132,8 @@
                                         <outlet property="delegate" destination="ItJ-Yk-ElG" id="8aH-iL-vxD"/>
                                     </connections>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5555555555" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezf-fl-ncV">
-                                    <rect key="frame" x="139" y="79" width="150" height="30"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5555555555" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezf-fl-ncV">
+                                    <rect key="frame" x="134.5" y="75" width="106.5" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -135,8 +141,8 @@
                                         <outlet property="delegate" destination="ItJ-Yk-ElG" id="dIN-5e-mx7"/>
                                     </connections>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add New Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hy-gY-wrJ">
-                                    <rect key="frame" x="130" y="8" width="135" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hy-gY-wrJ">
+                                    <rect key="frame" x="120" y="8" width="135" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -159,22 +165,22 @@
                             </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="b7C-VZ-QF4" detailTextLabel="aK3-S2-Z3p" style="IBUITableViewCellStyleValue1" id="gnI-wu-bET">
-                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="b7C-VZ-QF4" detailTextLabel="aK3-S2-Z3p" rowHeight="90" style="IBUITableViewCellStyleValue1" id="gnI-wu-bET">
+                                <rect key="frame" x="0.0" y="88" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnI-wu-bET" id="J7F-rf-Kp6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7C-VZ-QF4">
-                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="34" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aK3-S2-Z3p">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="316" y="34" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -198,16 +204,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0L-Fz-bjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Ueq-ix-Shq">
                     <connections>
-                        <action selector="dismissKeyboard:" destination="ItJ-Yk-ElG" id="kEX-6a-iVh"/>
+                        <action selector="dissmissKeyboard:" destination="ItJ-Yk-ElG" id="aHY-Ij-K9U"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1831" y="38"/>
+            <point key="canvasLocation" x="2768.8000000000002" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
         <image name="longhold" width="250" height="250"/>
         <image name="people" width="24" height="24"/>
-        <image name="sent-mail" width="24" height="24"/>
     </resources>
 </document>

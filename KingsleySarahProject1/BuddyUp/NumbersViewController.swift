@@ -12,11 +12,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     var library: ContactLibrary!
     @IBOutlet var NameTextview: UITextField!
     @IBOutlet var NumberTextview: UITextField!
-    var numbers: [String] = []
-    
-    func getNumbers() -> [String]{
-        return numbers
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +25,16 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    //this looks promising: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "ViewTransfer2"{
+            let viewChanger = segue.destination as! ViewController
+            
+            viewChanger.gotNumbers = library.getNumbers()
+            viewChanger.gotNames = library.getNames()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,8 +81,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             let indexPath = NSIndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath as IndexPath], with: .automatic)
         }
-        
-        numbers.append(newNumber)
     }
     
     @IBAction func editList(_ sender: UIButton) {
@@ -97,7 +100,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             verifyDelete(contact.name, { (action) -> Void in
                 self.library.removeContact(contact)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                self.numbers.remove(at: self.numbers.index(of: contact.number)!)
             })
         }
     }
@@ -122,11 +124,16 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         library.moveContact(sourceIndexPath.row, destinationIndexPath.row)
     }
     
-    @IBAction func dismissKeyboard(_ sender: AnyObject) {
-        NameTextview.resignFirstResponder()
-        NumberTextview.resignFirstResponder()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
+    @IBAction func dissmissKeyboard(_ sender: Any) {
+        NameTextview.resignFirstResponder()
+        NumberTextview.resignFirstResponder()
+        
+    }
     //Modified from this resource: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
