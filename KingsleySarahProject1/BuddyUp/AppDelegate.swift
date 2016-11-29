@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let myViewController = window!.rootViewController as! ViewController
+        contacts.contacts = [Contact]()
         myViewController.contacts = contacts
         myViewController.gotpicture = picture
+        
         
         return true
     }

@@ -20,18 +20,23 @@ class photoViewController: UIViewController, UINavigationControllerDelegate, UII
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
-//            // set image view
-//            ImageView.image = img
-//        }
+        if(picture != nil){
+            if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
+                // set image view
+                ImageView.image = img
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
-            // set image view
-            ImageView.image = img
+        if(picture != nil){
+            if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
+                // set image view
+                ImageView.image = img
+            }
         }
     }
     

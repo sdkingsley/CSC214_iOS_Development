@@ -1,12 +1,27 @@
 
+/* Class = "UIButton"; normalTitle = "Edit Team"; ObjectID = "2Xq-4O-h37"; */
+"2Xq-4O-h37.normalTitle" = "Modifier l'équipe";
+
 /* Class = "UILabel"; text = "Add New Contact"; ObjectID = "3Hy-gY-wrJ"; */
 "3Hy-gY-wrJ.text" = "Ajouter un nouveau contact";
+
+/* Class = "UILabel"; text = "Team: "; ObjectID = "4MY-ZQ-frg"; */
+"4MY-ZQ-frg.text" = "Équipe: ";
 
 /* Class = "UITextField"; placeholder = "Friend's Name"; ObjectID = "70Q-7o-pgi"; */
 "70Q-7o-pgi.placeholder" = "Nom de l'ami";
 
-/* Class = "UILabel"; text = "Long Hold"; ObjectID = "AxJ-In-RSd"; */
-"AxJ-In-RSd.text" = "Longue attente";
+/* Class = "UIButton"; normalTitle = "Image View Scene for Grading"; ObjectID = "J9C-9o-TnC"; */
+"J9C-9o-TnC.normalTitle" = "Scène de vue d'image pour la notation";
+
+/* Class = "UILabel"; text = "Long hold"; ObjectID = "Xwl-QJ-A1Y"; */
+"Xwl-QJ-A1Y.text" = "Longue attente";
+
+/* Class = "UINavigationItem"; prompt = "Back"; ObjectID = "YNp-h8-3ko"; */
+"YNp-h8-3ko.prompt" = "Arrière";
+
+/* Class = "UINavigationItem"; title = "Back"; ObjectID = "YNp-h8-3ko"; */
+"YNp-h8-3ko.title" = "Arrière";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "aK3-S2-Z3p"; */
 "aK3-S2-Z3p.text" = "Détail";
@@ -17,14 +32,17 @@
 /* Class = "UILabel"; text = "Title"; ObjectID = "b7C-VZ-QF4"; */
 "b7C-VZ-QF4.text" = "Titre";
 
-/* Class = "UITabBarItem"; title = "Send Alert"; ObjectID = "d9o-Mk-lns"; */
-"d9o-Mk-lns.title" = "Envoyer une alerte";
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "dAN-vT-rhQ"; */
+"dAN-vT-rhQ.normalTitle" = "Mettre à jour";
 
 /* Class = "UITextField"; placeholder = "5555555555"; ObjectID = "ezf-fl-ncV"; */
 "ezf-fl-ncV.placeholder" = "5555555555";
 
 /* Class = "UIButton"; normalTitle = "Add"; ObjectID = "ma7-zF-Ydg"; */
 "ma7-zF-Ydg.normalTitle" = "Ajouter";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "vWJ-Tz-xBl"; */
+"vWJ-Tz-xBl.title" = "Arrière";
 
 /* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "w5Y-zT-10X"; */
 "w5Y-zT-10X.normalTitle" = "Modifier";

@@ -41,16 +41,18 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "ViewTransfer"{
-            let viewChanger = segue.destination as! NumbersViewController
-            
-            viewChanger.library = contacts
-        }
-        
         if segue.identifier == "PhotoViewTransfer"{
+            
             let viewChanger = segue.destination as! photoViewController
             
             viewChanger.picture = gotpicture
+        }
+        
+        if segue.identifier == "ViewTransfer"{
+            
+            let viewChanger = segue.destination as! NumbersViewController
+            
+            viewChanger.library = contacts
         }
     }
     
