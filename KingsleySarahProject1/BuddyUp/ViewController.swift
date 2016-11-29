@@ -29,8 +29,10 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         var NamesList:String = "Team: "
         
-        for name in contacts.getNames(){
-            NamesList.append(name + " ")
+        if(contacts != nil){
+            for name in contacts.getNames(){
+                NamesList.append(name + " ")
+            }
         }
         
         TeamLabel.text = NamesList

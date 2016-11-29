@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--Back-->
         <scene sceneID="2PY-mc-Nlq">
             <objects>
                 <viewController id="U0S-KG-DXh" customClass="photoViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,6 +111,11 @@
                                             <action selector="AddPic:" destination="U0S-KG-DXh" id="4AW-p6-OWt"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Back" id="vWJ-Tz-xBl">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="9gC-5A-lkl"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-wN-kOg">
@@ -133,7 +138,7 @@
                             <constraint firstItem="MPO-JY-sY3" firstAttribute="bottom" secondItem="gjW-2P-r9Z" secondAttribute="top" id="ppm-tp-atk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YNp-h8-3ko"/>
+                    <navigationItem key="navigationItem" title="Back" prompt="Back" id="YNp-h8-3ko"/>
                     <connections>
                         <outlet property="CameraButton" destination="Jas-qb-nU1" id="ZXT-IN-SY5"/>
                         <outlet property="ImageView" destination="CJb-zd-cjS" id="BXK-7O-iXh"/>
@@ -281,4 +286,7 @@
         <image name="longhold" width="250" height="250"/>
         <image name="people" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9gC-5A-lkl"/>
+    </inferredMetricsTieBreakers>
 </document>
