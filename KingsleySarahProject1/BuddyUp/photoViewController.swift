@@ -26,6 +26,23 @@ class photoViewController: UIViewController, UINavigationControllerDelegate, UII
 //        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
+            // set image view
+            ImageView.image = img
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "photoViewTransfer2"{
+            let viewChanger = segue.destination as! ViewController
+            
+            viewChanger.gotpicture = picture
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,6 +81,7 @@ class photoViewController: UIViewController, UINavigationControllerDelegate, UII
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let photo = info[UIImagePickerControllerOriginalImage] as! UIImage
+        ImageHelper.saveImage(photo, forUID: picture.aUniqueID)
         
         ImageView.image = photo
         

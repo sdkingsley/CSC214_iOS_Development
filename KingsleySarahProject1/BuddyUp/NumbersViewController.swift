@@ -30,7 +30,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         
     }
     
-    //this looks promising: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson8.html
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "ViewTransfer2"{
             let viewChanger = segue.destination as! ViewController

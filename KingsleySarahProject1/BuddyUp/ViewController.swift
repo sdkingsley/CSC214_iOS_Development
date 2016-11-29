@@ -13,6 +13,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet var TeamLabel: UILabel! //label for string of team names
     var contacts: ContactLibrary!
+    var gotpicture: Picture!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,12 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
             let viewChanger = segue.destination as! NumbersViewController
             
             viewChanger.library = contacts
+        }
+        
+        if segue.identifier == "PhotoViewTransfer"{
+            let viewChanger = segue.destination as! photoViewController
+            
+            viewChanger.picture = gotpicture
         }
     }
     

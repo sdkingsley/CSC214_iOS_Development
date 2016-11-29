@@ -84,7 +84,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
+            <point key="canvasLocation" x="2850.4000000000001" y="38.23088455772114"/>
         </scene>
         <!--Back-->
         <scene sceneID="2PY-mc-Nlq">
@@ -98,8 +98,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPO-JY-sY3">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPO-JY-sY3">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="Jas-qb-nU1">
                                         <connections>
@@ -113,29 +114,21 @@
                                     </barButtonItem>
                                     <barButtonItem title="Back" id="vWJ-Tz-xBl">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="9gC-5A-lkl"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="photoViewTransfer2" id="HOK-JO-i4K"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-wN-kOg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJb-zd-cjS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TANZSPoster" translatesAutoresizingMaskIntoConstraints="NO" id="CJb-zd-cjS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dKK-wN-kOg" firstAttribute="top" secondItem="Qjx-8q-RuD" secondAttribute="top" id="AIY-Rz-2Xy"/>
-                            <constraint firstItem="MPO-JY-sY3" firstAttribute="leading" secondItem="Qjx-8q-RuD" secondAttribute="leading" id="MaI-v6-l8t"/>
-                            <constraint firstItem="MPO-JY-sY3" firstAttribute="trailing" secondItem="dKK-wN-kOg" secondAttribute="trailing" id="WLi-Oz-Cra"/>
-                            <constraint firstAttribute="trailing" secondItem="dKK-wN-kOg" secondAttribute="trailing" id="cxV-nF-EYY"/>
-                            <constraint firstItem="MPO-JY-sY3" firstAttribute="top" secondItem="dKK-wN-kOg" secondAttribute="bottom" id="gff-UN-ihf"/>
-                            <constraint firstItem="dKK-wN-kOg" firstAttribute="leading" secondItem="Qjx-8q-RuD" secondAttribute="leading" id="oqh-0l-6OP"/>
-                            <constraint firstItem="MPO-JY-sY3" firstAttribute="bottom" secondItem="gjW-2P-r9Z" secondAttribute="top" id="ppm-tp-atk"/>
+                            <constraint firstItem="CJb-zd-cjS" firstAttribute="top" secondItem="a9y-gL-9Th" secondAttribute="bottom" id="XPf-zW-qZy"/>
+                            <constraint firstItem="CJb-zd-cjS" firstAttribute="leading" secondItem="Qjx-8q-RuD" secondAttribute="leading" id="dZt-wr-Bru"/>
+                            <constraint firstAttribute="trailing" secondItem="CJb-zd-cjS" secondAttribute="trailing" id="i4Q-eG-9eY"/>
+                            <constraint firstItem="gjW-2P-r9Z" firstAttribute="top" secondItem="CJb-zd-cjS" secondAttribute="bottom" constant="44" id="vqh-6A-kfY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Back" prompt="Back" id="YNp-h8-3ko"/>
@@ -146,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tga-PB-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="835"/>
+            <point key="canvasLocation" x="2850" y="788"/>
         </scene>
         <!--My Party-->
         <scene sceneID="GqQ-vp-Hm0">
@@ -160,18 +153,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-vT-rhQ">
-                                    <rect key="frame" x="8" y="22" width="51" height="30"/>
-                                    <state key="normal" title="Update"/>
-                                    <connections>
-                                        <segue destination="BYZ-38-t0r" kind="show" identifier="ViewTransfer2" id="RGt-s0-IvA"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-zT-10X">
                                     <rect key="frame" x="337" y="22" width="30" height="30"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
                                         <action selector="editList:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="sp5-LY-V9q"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-vT-rhQ" customClass="ViewTransfer2">
+                                    <rect key="frame" x="8" y="15" width="51" height="30"/>
+                                    <state key="normal" title="Update"/>
+                                    <connections>
+                                        <segue destination="BYZ-38-t0r" kind="show" identifier="ViewTransfer2" id="1UP-wb-o96"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -279,14 +272,15 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2768.8000000000002" y="37.331334332833585"/>
+            <point key="canvasLocation" x="3708" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TANZSPoster" width="1320" height="2040"/>
         <image name="longhold" width="250" height="250"/>
         <image name="people" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9gC-5A-lkl"/>
+        <segue reference="HOK-JO-i4K"/>
     </inferredMetricsTieBreakers>
 </document>
