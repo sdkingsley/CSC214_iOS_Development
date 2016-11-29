@@ -12,7 +12,7 @@ import MessageUI
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet var TeamLabel: UILabel! //label for string of team names
-    var gotLibrary: ContactLibrary!
+    var contacts: ContactLibrary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         var NamesList:String = "Team: "
         
-        for name in gotLibrary.getNames(){
+        for name in contacts.getNames(){
             NamesList.append(name + " ")
         }
         
@@ -40,7 +40,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         if segue.identifier == "ViewTransfer"{
             let viewChanger = segue.destination as! NumbersViewController
             
-            viewChanger.library = gotLibrary
+            viewChanger.library = contacts
         }
     }
     
@@ -55,7 +55,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         let messageVC = MFMessageComposeViewController()
         messageVC.messageComposeDelegate = self
         
-        messageVC.recipients = gotLibrary.getNumbers()
+        messageVC.recipients = contacts.getNumbers()
         messageVC.body = "🙅🏼"
         
         self.present(messageVC, animated:true, completion: nil)

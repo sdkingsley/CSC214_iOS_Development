@@ -10,7 +10,7 @@ import UIKit
 
 class ContactLibrary: NSObject, NSCoding{
     var contacts: [Contact] = []
-    static let contactsArrayKey = "contacts"
+    static let contactsKey = "contacts"
     
     override init() {
         super.init()
@@ -61,11 +61,11 @@ class ContactLibrary: NSObject, NSCoding{
     
     // encodes (serializes) contact library
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(contacts, forKey: ContactLibrary.contactsArrayKey)
+        aCoder.encode(contacts, forKey: ContactLibrary.contactsKey)
     }
     
     // decodes (deserializes) contact library
     required init(coder aDecoder: NSCoder) {
-        contacts = aDecoder.decodeObject(forKey: ContactLibrary.contactsArrayKey) as! [Contact]
+        contacts = aDecoder.decodeObject(forKey: ContactLibrary.contactsKey) as! [Contact]
     }
 }

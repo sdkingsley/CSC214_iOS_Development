@@ -12,7 +12,7 @@ class contactsPerister: NSObject {
     static let contactsArchiveURL: NSURL = {
         let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = documentsDirectories.first!
-        return documentDirectory.appendingPathComponent("ContactLibrary.archive") as NSURL
+        return documentDirectory.appendingPathComponent("contacts.archive") as NSURL
     }()
     
     class func getContacts() -> ContactLibrary {
@@ -25,6 +25,6 @@ class contactsPerister: NSObject {
     }
     
     class func setContacts(_ contacts: ContactLibrary) -> Bool {
-        return NSKeyedArchiver.archiveRootObject(ContactLibrary(), toFile: contactsArchiveURL.path!)
+        return NSKeyedArchiver.archiveRootObject(contacts, toFile: contactsArchiveURL.path!)
     }
 }

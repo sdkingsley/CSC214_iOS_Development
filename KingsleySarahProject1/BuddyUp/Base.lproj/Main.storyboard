@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-hY-cmi">
-                                <rect key="frame" x="16" y="64" width="343" height="390"/>
+                                <rect key="frame" x="16" y="64" width="343" height="439"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="longhold" translatesAutoresizingMaskIntoConstraints="NO" id="0es-Aa-jnb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="250"/>
@@ -47,6 +47,15 @@
                                         </state>
                                         <connections>
                                             <segue destination="ItJ-Yk-ElG" kind="show" identifier="ViewTransfer" id="b4i-Hr-1Ca"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9C-9o-TnC">
+                                        <rect key="frame" x="0.0" y="409" width="343" height="30"/>
+                                        <state key="normal" title="Image View Scene for Grading">
+                                            <color key="titleColor" red="0.96124261617660522" green="0.26507222652435303" blue="0.40921038389205933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="U0S-KG-DXh" kind="show" identifier="PhotoViewTransfer" id="l9T-it-oF5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,6 +85,63 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="2PY-mc-Nlq">
+            <objects>
+                <viewController id="U0S-KG-DXh" customClass="photoViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9y-gL-9Th"/>
+                        <viewControllerLayoutGuide type="bottom" id="gjW-2P-r9Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qjx-8q-RuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPO-JY-sY3">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Jas-qb-nU1">
+                                        <connections>
+                                            <action selector="TakePic:" destination="U0S-KG-DXh" id="mls-fL-Mg2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="organize" id="XQP-9w-0lo">
+                                        <connections>
+                                            <action selector="AddPic:" destination="U0S-KG-DXh" id="4AW-p6-OWt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-wN-kOg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJb-zd-cjS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKK-wN-kOg" firstAttribute="top" secondItem="Qjx-8q-RuD" secondAttribute="top" id="AIY-Rz-2Xy"/>
+                            <constraint firstItem="MPO-JY-sY3" firstAttribute="leading" secondItem="Qjx-8q-RuD" secondAttribute="leading" id="MaI-v6-l8t"/>
+                            <constraint firstItem="MPO-JY-sY3" firstAttribute="trailing" secondItem="dKK-wN-kOg" secondAttribute="trailing" id="WLi-Oz-Cra"/>
+                            <constraint firstAttribute="trailing" secondItem="dKK-wN-kOg" secondAttribute="trailing" id="cxV-nF-EYY"/>
+                            <constraint firstItem="MPO-JY-sY3" firstAttribute="top" secondItem="dKK-wN-kOg" secondAttribute="bottom" id="gff-UN-ihf"/>
+                            <constraint firstItem="dKK-wN-kOg" firstAttribute="leading" secondItem="Qjx-8q-RuD" secondAttribute="leading" id="oqh-0l-6OP"/>
+                            <constraint firstItem="MPO-JY-sY3" firstAttribute="bottom" secondItem="gjW-2P-r9Z" secondAttribute="top" id="ppm-tp-atk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YNp-h8-3ko"/>
+                    <connections>
+                        <outlet property="CameraButton" destination="Jas-qb-nU1" id="ZXT-IN-SY5"/>
+                        <outlet property="ImageView" destination="CJb-zd-cjS" id="BXK-7O-iXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tga-PB-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="835"/>
         </scene>
         <!--My Party-->
         <scene sceneID="GqQ-vp-Hm0">

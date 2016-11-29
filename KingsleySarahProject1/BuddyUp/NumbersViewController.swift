@@ -35,7 +35,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         if segue.identifier == "ViewTransfer2"{
             let viewChanger = segue.destination as! ViewController
             
-            viewChanger.gotLibrary = library
+            viewChanger.contacts = library
         }
     }
     
