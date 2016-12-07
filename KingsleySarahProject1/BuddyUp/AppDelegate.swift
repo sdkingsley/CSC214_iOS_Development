@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var contacts = contactsPerister.getContacts()
-    var picture = PicturePersister.getPicture()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
 //        _ = contactsPerister.setContacts(contacts) TODO NOT WORKING
-        _ = PicturePersister.setPicture(picture)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
