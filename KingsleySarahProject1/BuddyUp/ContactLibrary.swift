@@ -9,8 +9,8 @@
 import UIKit
 
 class ContactLibrary: NSObject, NSCoding{
-    var contacts: [Contact] = []
     static let contactsKey = "contacts"
+    var contacts: [Contact] = []
     
     override init() {
         super.init()

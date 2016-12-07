@@ -8,6 +8,8 @@
 
 import UIKit
 
+//RESOURCE: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html
+
 class Contact:NSObject{
     var name: String
     var number: String

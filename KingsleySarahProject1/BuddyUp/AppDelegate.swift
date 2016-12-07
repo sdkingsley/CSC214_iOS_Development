@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myViewController = window!.rootViewController as! ViewController
         contacts.contacts = [Contact]()
         myViewController.contacts = contacts
-        myViewController.gotpicture = picture
-        
         
         return true
     }
