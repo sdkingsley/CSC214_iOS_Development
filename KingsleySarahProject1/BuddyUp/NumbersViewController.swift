@@ -16,6 +16,10 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let savedContacts = loadContacts() {
+            library.contacts += savedContacts
+        }
+        
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
@@ -86,6 +90,8 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             let indexPath = NSIndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath as IndexPath], with: .automatic)
         }
+        
+        saveContacts()
     }
     
     @IBAction func editList(_ sender: UIButton) {
@@ -97,6 +103,8 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             setEditing(false, animated: true)//turns the the off if its on
             sender.setTitle("Edit", for: .normal)
         }
+        
+        saveContacts()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -104,6 +112,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
             let contact = library.contacts[indexPath.row]
             verifyDelete(contact.name, { (action) -> Void in
                 self.library.removeContact(contact)
+                self.saveContacts()
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })
         }
@@ -127,6 +136,8 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         library.moveContact(sourceIndexPath.row, destinationIndexPath.row)
+        
+        saveContacts()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -139,6 +150,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         NumberTextview.resignFirstResponder()
         
     }
+    
     //Modified from this resource: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
@@ -156,5 +168,18 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         }
     }
     
-
+    
+    //RESOURCE: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html
+    //NSCoding
+    func saveContacts() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(library, toFile: Contact.ArchiveURL.path)
+        
+        if !isSuccessfulSave {
+            print("Failed to save contacts...")
+        }
+    }
+    
+    func loadContacts() -> [Contact]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Contact.ArchiveURL.path) as? [Contact]
+    }
 }
