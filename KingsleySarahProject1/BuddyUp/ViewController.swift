@@ -28,15 +28,13 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     //Navigation
     @IBAction func unwindContacts(sender: UIStoryboardSegue) {
         
-            var NamesList:String = "Team: "
+        var NamesList:String = "Team: "
+        
+        for name in contacts.getNames(){
+            NamesList.append(name + " ")
+        }
             
-            if(contacts != nil){
-                for name in contacts.getNames(){
-                    NamesList.append(name + " ")
-                }
-            }
-            
-            TeamLabel.text = NamesList
+        TeamLabel.text = NamesList
     }
     
     override func viewWillAppear(_ animated: Bool) {

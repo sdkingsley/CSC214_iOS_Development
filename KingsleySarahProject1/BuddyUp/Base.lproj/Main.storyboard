@@ -90,8 +90,8 @@
                             <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-pg-XhR">
-                                    <rect key="frame" x="-46" y="7" width="30" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-pg-XhR">
+                                    <rect key="frame" x="16" y="7" width="30" height="30"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
                                         <action selector="editList:" destination="ItJ-Yk-ElG" eventType="touchUpInside" id="J8h-Q3-aoD"/>
