@@ -11,8 +11,9 @@ import MessageUI
 
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
+    @IBOutlet var EditTeamButton: UIBarButtonItem!
     @IBOutlet var TeamLabel: UILabel! //label for string of team names
-    var contacts: ContactLibrary!
+    var contacts = contactsPerister.getContacts()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,42 +26,37 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     }
     
     //Navigation
-//    @IBAction func unwindContacts(sender: UIStoryboardSegue) {
-//        if let sourceViewController = sender.source as? NumbersViewController, contacts.contacts = sourceViewController.library.contacts {
-//            
-//            var NamesList:String = "Team: "
-//            
-//            if(contacts != nil){
-//                for name in contacts.getNames(){
-//                    NamesList.append(name + " ")
-//                }
-//            }
-//            
-//            TeamLabel.text = NamesList
-//        }
-//    }
+    @IBAction func unwindContacts(sender: UIStoryboardSegue) {
+        
+            var NamesList:String = "Team: "
+            
+            if(contacts != nil){
+                for name in contacts.getNames(){
+                    NamesList.append(name + " ")
+                }
+            }
+            
+            TeamLabel.text = NamesList
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         var NamesList:String = "Team: "
         
-        if(contacts != nil){
-            for name in contacts.getNames(){
-                NamesList.append(name + " ")
-            }
+        for name in contacts.getNames(){
+            NamesList.append(name + " ")
         }
         
         TeamLabel.text = NamesList
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        
-        if segue.identifier == "ViewTransfer"{
+        if sender as AnyObject? === EditTeamButton {
+            let nav = segue.destination as! UINavigationController
+            let viewChanger = nav.topViewController as! NumbersViewController
             
-            let viewChanger = segue.destination as! NumbersViewController
-            
-            viewChanger.library = contacts
+            viewChanger.library.contacts = contacts.contacts
         }
     }
     

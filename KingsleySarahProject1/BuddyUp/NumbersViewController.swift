@@ -17,7 +17,7 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        library.contacts = [Contact]()
+//        library.contacts = [Contact]()
         
         if let savedContacts = loadContacts() {
             library.contacts += savedContacts
@@ -42,16 +42,17 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     //Legacy
     //    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
     //        if segue.identifier == "ViewTransfer2"{
-    //            let viewChanger = segue.destination as! ViewController
-    //
-    //            viewChanger.contacts = library
+//                let viewChanger = segue.destination as! ViewController
+//    
+//                viewChanger.contacts = library
     //        }
     //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if sender as AnyObject? === SaveButton {
-            //TODO
-//            let contacts = library
+            let viewChanger = segue.destination as! ViewController
+            
+            viewChanger.contacts = library
         }
     }
     
@@ -104,6 +105,8 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         }
         
         saveContacts()
+        NameTextview.resignFirstResponder()
+        NumberTextview.resignFirstResponder()
     }
     
     @IBAction func editList(_ sender: UIButton) {
@@ -160,7 +163,6 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
     @IBAction func dissmissKeyboard(_ sender: Any) {
         NameTextview.resignFirstResponder()
         NumberTextview.resignFirstResponder()
-        
     }
     
     //Modified from this resource: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield

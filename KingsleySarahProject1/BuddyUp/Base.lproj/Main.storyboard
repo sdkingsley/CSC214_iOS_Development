@@ -58,11 +58,12 @@
                     <navigationItem key="navigationItem" title="BuddyUp" id="Afh-cA-Hyj">
                         <barButtonItem key="rightBarButtonItem" title="Edit Team" id="Wv0-91-Dmd">
                             <connections>
-                                <segue destination="mdN-pH-aXf" kind="show" id="0m8-1C-feu"/>
+                                <segue destination="mdN-pH-aXf" kind="show" id="M0C-ca-H4c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="EditTeamButton" destination="Wv0-91-Dmd" id="azu-Aa-VgH"/>
                         <outlet property="TeamLabel" destination="4MY-ZQ-frg" id="taN-oX-NTw"/>
                     </connections>
                 </viewController>
