@@ -9,12 +9,15 @@
 import UIKit
 
 class NumbersViewController: UITableViewController, UITextFieldDelegate{
-    var library: ContactLibrary!
+    var library = contactsPerister.getContacts()
     @IBOutlet var NameTextview: UITextField!
     @IBOutlet var NumberTextview: UITextField!
+    @IBOutlet var SaveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        library.contacts = [Contact]()
         
         if let savedContacts = loadContacts() {
             library.contacts += savedContacts
@@ -34,25 +37,34 @@ class NumbersViewController: UITableViewController, UITextFieldDelegate{
         
     }
     
+    //Navigation
+    
+    //Legacy
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    //        if segue.identifier == "ViewTransfer2"{
+    //            let viewChanger = segue.destination as! ViewController
+    //
+    //            viewChanger.contacts = library
+    //        }
+    //    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "ViewTransfer2"{
-            let viewChanger = segue.destination as! ViewController
-            
-            viewChanger.contacts = library
+        if sender as AnyObject? === SaveButton {
+            //TODO
+//            let contacts = library
         }
     }
     
+    @IBAction func Cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int{
-        if(library != nil){
             return library.contacts.count
-        }else{
-            return 0
-        }
     }
     
     override func tableView(_ tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell{

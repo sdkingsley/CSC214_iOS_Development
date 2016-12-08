@@ -68,4 +68,5 @@ class ContactLibrary: NSObject, NSCoding{
     required init(coder aDecoder: NSCoder) {
         contacts = aDecoder.decodeObject(forKey: ContactLibrary.contactsKey) as! [Contact]
     }
+    
 }

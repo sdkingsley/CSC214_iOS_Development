@@ -14,14 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var contacts = contactsPerister.getContacts()
+//    var contacts = contactsPerister.getContacts()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let myViewController = window!.rootViewController as! ViewController
-        contacts.contacts = [Contact]()
-        myViewController.contacts = contacts
+//        let myViewController = window!.rootViewController as! ViewController
+//        contacts.contacts = [Contact]()
+//        myViewController.contacts = contacts
         
         return true
     }

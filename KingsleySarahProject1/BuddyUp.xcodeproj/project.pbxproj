@@ -20,7 +20,6 @@
 		26365EFB1DD02B5100792057 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26365EFA1DD02B5100792057 /* README.txt */; };
 		26365EFD1DD02B5A00792057 /* SampleOutput in Resources */ = {isa = PBXBuildFile; fileRef = 26365EFC1DD02B5A00792057 /* SampleOutput */; };
 		263F60EA1DECECD60059CD68 /* contactsPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263F60E91DECECD60059CD68 /* contactsPersistor.swift */; };
-		263F60EE1DED0B330059CD68 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263F60ED1DED0B330059CD68 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		26365EFA1DD02B5100792057 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		26365EFC1DD02B5A00792057 /* SampleOutput */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SampleOutput; sourceTree = SOURCE_ROOT; };
 		263F60E91DECECD60059CD68 /* contactsPersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsPersistor.swift; sourceTree = "<group>"; };
-		263F60ED1DED0B330059CD68 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		263F60F51DED29780059CD68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		263F60F61DED29780059CD68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		263F60F71DED297D0059CD68 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			children = (
 				2628B0691DCE6B84004B30C8 /* AppDelegate.swift */,
 				2628B06B1DCE6B84004B30C8 /* ViewController.swift */,
-				263F60ED1DED0B330059CD68 /* Photo.swift */,
 				2628B07E1DCE9120004B30C8 /* NumbersViewController.swift */,
 				2628B06D1DCE6B84004B30C8 /* Main.storyboard */,
 				2628B0731DCE6B84004B30C8 /* Assets.xcassets */,
@@ -173,7 +170,6 @@
 				2628B0851DCEAE5F004B30C8 /* Contact.swift in Sources */,
 				2628B06C1DCE6B84004B30C8 /* ViewController.swift in Sources */,
 				2628B07F1DCE9121004B30C8 /* NumbersViewController.swift in Sources */,
-				263F60EE1DED0B330059CD68 /* Photo.swift in Sources */,
 				2628B0721DCE6B84004B30C8 /* BuddyUp.xcdatamodeld in Sources */,
 				2628B0831DCE98DC004B30C8 /* ContactLibrary.swift in Sources */,
 				263F60EA1DECECD60059CD68 /* contactsPersistor.swift in Sources */,
