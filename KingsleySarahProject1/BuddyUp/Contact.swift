@@ -43,5 +43,4 @@ class Contact:NSObject,NSCoding{
         self.init(name, number)
     }
     
-    
 }

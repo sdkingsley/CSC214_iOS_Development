@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-hY-cmi">
-                                <rect key="frame" x="16" y="108" width="343" height="341"/>
+                                <rect key="frame" x="16" y="108" width="343" height="390"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="longhold" translatesAutoresizingMaskIntoConstraints="NO" id="0es-Aa-jnb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="250"/>
@@ -41,6 +41,13 @@
                                         <color key="textColor" red="0.66988104581832886" green="0.30750596523284912" blue="0.27170312404632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4T-F7-kiI">
+                                        <rect key="frame" x="0.0" y="360" width="343" height="30"/>
+                                        <state key="normal" title="Project 3 Requirements"/>
+                                        <connections>
+                                            <segue destination="reu-Zs-Mhp" kind="show" id="1GY-ae-qz4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -75,6 +82,62 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3791" y="-60"/>
+        </scene>
+        <!--Image Browser View Controller-->
+        <scene sceneID="vw8-kt-KJc">
+            <objects>
+                <viewController id="reu-Zs-Mhp" customClass="ImageBrowserViewController" customModule="BuddyUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EBY-Xa-r9F"/>
+                        <viewControllerLayoutGuide type="bottom" id="9d2-mt-Tx6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cM3-ZI-c84">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-Na-bwb">
+                                <rect key="frame" x="16" y="112" width="343" height="555"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U5w-Bp-uqo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMz-iO-1pV">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pN-BC-JgT">
+                                                <rect key="frame" x="305" y="0.0" width="38" height="30"/>
+                                                <state key="normal" title="Show"/>
+                                                <connections>
+                                                    <action selector="fetchImage:" destination="reu-Zs-Mhp" eventType="touchUpInside" id="aks-Fp-NMP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="tIe-Ok-LoM">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="517"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9d2-mt-Tx6" firstAttribute="top" secondItem="Z61-Na-bwb" secondAttribute="bottom" id="LjX-au-y4P"/>
+                            <constraint firstItem="Z61-Na-bwb" firstAttribute="top" secondItem="EBY-Xa-r9F" secondAttribute="bottom" constant="48" id="lir-9p-xUJ"/>
+                            <constraint firstItem="Z61-Na-bwb" firstAttribute="leading" secondItem="cM3-ZI-c84" secondAttribute="leadingMargin" id="wGR-9T-1ss"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z61-Na-bwb" secondAttribute="trailing" id="zdk-NI-lQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tIe-Ok-LoM" id="4Oq-cE-T36"/>
+                        <outlet property="urlField" destination="UMz-iO-1pV" id="z65-ic-jfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxc-vB-Js5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3790" y="624"/>
         </scene>
         <!--Your Team-->
         <scene sceneID="GqQ-vp-Hm0">
@@ -167,14 +230,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7C-VZ-QF4">
-                                            <rect key="frame" x="15" y="35" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="35" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.66988104579999996" green="0.30750596520000001" blue="0.27170312400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aK3-S2-Z3p">
-                                            <rect key="frame" x="316" y="35" width="44" height="21"/>
+                                            <rect key="frame" x="316" y="35" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.66988104579999996" green="0.30750596520000001" blue="0.27170312400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -244,7 +307,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mdN-pH-aXf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="CyZ-c5-ogg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="CyZ-c5-ogg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.96124261617660522" green="0.26507222652435303" blue="0.40921038389205933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -260,6 +323,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="landscape" width="256" height="256"/>
         <image name="longhold" width="250" height="250"/>
     </resources>
 </document>

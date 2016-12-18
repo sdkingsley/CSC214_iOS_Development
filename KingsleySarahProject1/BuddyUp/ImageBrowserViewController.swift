@@ -1,34 +1,32 @@
 //
-//  ViewController.swift
-//  KingsleySarahAssignment10
+//  ImageBrowserViewController.swift
+//  BuddyUp
 //
-//  Created by Sarah Kingsley on 12/13/16.
+//  Created by Sarah Kingsley on 12/18/16.
 //  Copyright © 2016 Sarah Kingsley. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ImageBrowserViewController: UIViewController {
+    
     
     @IBOutlet var urlField: UITextField!
     @IBOutlet var imageView: UIImageView!
-    var picture: Picture!
     
-    let imageFetcher = ImageFetcher()
+    var imageFetcher: ImageFetcher!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let img = ImageHelper.getImage(forUID: picture.aUniqueID) {
-            // set image view
-            imageView.image = img
-        }
-        
         imageView.layer.masksToBounds = true
+        
+        imageFetcher = ImageFetcher()
     }
     
     @IBAction func fetchImage(_ sender: Any) {
         let url = urlField.text!
+        urlField.resignFirstResponder()
         
         imageFetcher.fetchImage(url: url) {
             (fetchResult) -> Void in
@@ -36,12 +34,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
             switch(fetchResult) {
             case let .ImageSuccess(image):
                 OperationQueue.main.addOperation() {
-                    ImageHelper.saveImage(image, forUID: self.picture.aUniqueID)
                     self.imageView.image = image
                 }
             case let .ImageFailure(error):
                 OperationQueue.main.addOperation {
-                    self.imageView.image = UIImage(named:"oops")
+                    self.imageView.image = #imageLiteral(resourceName: "oops")
                 }
                 print("error: \(error)")
             }
@@ -49,9 +46,4 @@ class ViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
 }
-

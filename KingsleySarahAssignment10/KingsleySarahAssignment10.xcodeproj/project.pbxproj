@@ -13,6 +13,10 @@
 		262B0CFF1E005A16004BB431 /* KingsleySarahAssignment10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 262B0CFD1E005A16004BB431 /* KingsleySarahAssignment10.xcdatamodeld */; };
 		262B0D011E005A16004BB431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262B0D001E005A16004BB431 /* Assets.xcassets */; };
 		262B0D041E005A16004BB431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262B0D021E005A16004BB431 /* LaunchScreen.storyboard */; };
+		262B0D121E00EBB7004BB431 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B0D111E00EBB7004BB431 /* ImageFetcher.swift */; };
+		262B0D141E00F44D004BB431 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B0D131E00F44D004BB431 /* Picture.swift */; };
+		262B0D161E00F4CD004BB431 /* PicturePersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B0D151E00F4CD004BB431 /* PicturePersistor.swift */; };
+		262B0D181E00F66B004BB431 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B0D171E00F66B004BB431 /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		262B0D001E005A16004BB431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		262B0D031E005A16004BB431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		262B0D051E005A16004BB431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262B0D111E00EBB7004BB431 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		262B0D131E00F44D004BB431 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		262B0D151E00F4CD004BB431 /* PicturePersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturePersistor.swift; sourceTree = "<group>"; };
+		262B0D171E00F66B004BB431 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				262B0CF61E005A16004BB431 /* AppDelegate.swift */,
 				262B0CF81E005A16004BB431 /* ViewController.swift */,
+				262B0D111E00EBB7004BB431 /* ImageFetcher.swift */,
 				262B0CFA1E005A16004BB431 /* Main.storyboard */,
 				262B0D001E005A16004BB431 /* Assets.xcassets */,
 				262B0D021E005A16004BB431 /* LaunchScreen.storyboard */,
 				262B0D051E005A16004BB431 /* Info.plist */,
 				262B0CFD1E005A16004BB431 /* KingsleySarahAssignment10.xcdatamodeld */,
+				262B0D131E00F44D004BB431 /* Picture.swift */,
+				262B0D151E00F4CD004BB431 /* PicturePersistor.swift */,
+				262B0D171E00F66B004BB431 /* ImageHelper.swift */,
 			);
 			path = KingsleySarahAssignment10;
 			sourceTree = "<group>";
@@ -140,9 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262B0D161E00F4CD004BB431 /* PicturePersistor.swift in Sources */,
 				262B0CFF1E005A16004BB431 /* KingsleySarahAssignment10.xcdatamodeld in Sources */,
+				262B0D141E00F44D004BB431 /* Picture.swift in Sources */,
+				262B0D121E00EBB7004BB431 /* ImageFetcher.swift in Sources */,
 				262B0CF91E005A16004BB431 /* ViewController.swift in Sources */,
 				262B0CF71E005A16004BB431 /* AppDelegate.swift in Sources */,
+				262B0D181E00F66B004BB431 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
