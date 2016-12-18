@@ -43,7 +43,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4T-F7-kiI">
                                         <rect key="frame" x="0.0" y="360" width="343" height="30"/>
-                                        <state key="normal" title="Project 3 Requirements"/>
+                                        <state key="normal" title="Project 3 Requirements">
+                                            <color key="titleColor" red="0.96124261617660522" green="0.26507222652435303" blue="0.40921038389205933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="reu-Zs-Mhp" kind="show" id="1GY-ae-qz4"/>
                                         </connections>

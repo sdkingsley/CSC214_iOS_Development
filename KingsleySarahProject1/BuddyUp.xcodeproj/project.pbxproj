@@ -18,7 +18,6 @@
 		2628B07F1DCE9121004B30C8 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628B07E1DCE9120004B30C8 /* NumbersViewController.swift */; };
 		2628B0831DCE98DC004B30C8 /* ContactLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628B0821DCE98DC004B30C8 /* ContactLibrary.swift */; };
 		2628B0851DCEAE5F004B30C8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2628B0841DCEAE5F004B30C8 /* Contact.swift */; };
-		26365EF91DD02B4800792057 /* CSCProject1Explination.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 26365EF81DD02B4800792057 /* CSCProject1Explination.pdf */; };
 		26365EFB1DD02B5100792057 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26365EFA1DD02B5100792057 /* README.txt */; };
 		26365EFD1DD02B5A00792057 /* SampleOutput in Resources */ = {isa = PBXBuildFile; fileRef = 26365EFC1DD02B5A00792057 /* SampleOutput */; };
 		263F60EA1DECECD60059CD68 /* contactsPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263F60E91DECECD60059CD68 /* contactsPersistor.swift */; };
@@ -38,7 +37,6 @@
 		2628B07E1DCE9120004B30C8 /* NumbersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 		2628B0821DCE98DC004B30C8 /* ContactLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactLibrary.swift; sourceTree = "<group>"; };
 		2628B0841DCEAE5F004B30C8 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		26365EF81DD02B4800792057 /* CSCProject1Explination.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CSCProject1Explination.pdf; sourceTree = SOURCE_ROOT; };
 		26365EFA1DD02B5100792057 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		26365EFC1DD02B5A00792057 /* SampleOutput */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SampleOutput; sourceTree = SOURCE_ROOT; };
 		263F60E91DECECD60059CD68 /* contactsPersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsPersistor.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				2628B0701DCE6B84004B30C8 /* BuddyUp.xcdatamodeld */,
 				2628B0821DCE98DC004B30C8 /* ContactLibrary.swift */,
 				2628B0841DCEAE5F004B30C8 /* Contact.swift */,
-				26365EF81DD02B4800792057 /* CSCProject1Explination.pdf */,
 				26365EFA1DD02B5100792057 /* README.txt */,
 				26365EFC1DD02B5A00792057 /* SampleOutput */,
 				263F60E91DECECD60059CD68 /* contactsPersistor.swift */,
@@ -159,7 +156,6 @@
 			files = (
 				2628B0771DCE6B84004B30C8 /* LaunchScreen.storyboard in Resources */,
 				2628B0741DCE6B84004B30C8 /* Assets.xcassets in Resources */,
-				26365EF91DD02B4800792057 /* CSCProject1Explination.pdf in Resources */,
 				26365EFD1DD02B5A00792057 /* SampleOutput in Resources */,
 				2628B06F1DCE6B84004B30C8 /* Main.storyboard in Resources */,
 				26365EFB1DD02B5100792057 /* README.txt in Resources */,
